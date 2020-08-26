@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bt-logo-512.png",
+      "filename" : "COVIDaware_Icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bt-logo-512@2x.png",
+      "filename" : "COVIDaware_Icon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bt-logo-512@3x.png",
+      "filename" : "COVIDaware_Icon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
