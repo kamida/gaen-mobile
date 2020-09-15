@@ -15,8 +15,9 @@ export const ShareLink: FunctionComponent = () => {
   const { t } = useTranslation()
   const configuration = useConfigurationContext()
 
-  const showShareLink = Boolean(configuration.appDownloadLink)
-
+  const showShareLink = true
+  // const showShareLink = Boolean(configuration.appDownloadLink)
+  //
   const handleOnPressShare = async () => {
     try {
       await Share.share({
@@ -34,6 +35,7 @@ export const ShareLink: FunctionComponent = () => {
     return null
   }
 
+  const shareIconSize = 22
   return (
     <TouchableOpacity
       style={style.shareContainer}
@@ -51,8 +53,8 @@ export const ShareLink: FunctionComponent = () => {
       <View style={style.shareIconContainer}>
         <SvgXml
           xml={Icons.Share}
-          width={Iconography.small}
-          height={Iconography.small}
+          width={shareIconSize}
+          height={shareIconSize}
         />
       </View>
     </TouchableOpacity>
@@ -75,20 +77,21 @@ const style = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: Colors.secondary50,
     borderRadius: Outlines.borderRadiusMax,
-    width: Iconography.medium,
-    height: Iconography.medium,
-  },
-  shareImage: {
     width: Iconography.small,
     height: Iconography.small,
+  },
+  shareImage: {
+    width: Iconography.xSmall,
+    height: Iconography.xSmall,
   },
   shareTextContainer: {
     flex: 1,
     marginLeft: Spacing.medium,
   },
   shareText: {
-    ...Typography.header4,
-    lineHeight: Typography.smallLineHeight,
+    ...Typography.body2,
+    ...Typography.mediumBold,
+    color: Colors.primaryText,
   },
   shareIconContainer: {
     width: rightColumnWidth,
